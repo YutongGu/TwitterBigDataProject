@@ -2,7 +2,7 @@ from api_libs.twitterapi import *
 import datacollection.datacollection as datacollection
 
 def main():
-	users = datacollection.get_valid_users(tw_api, 10)
+	users = datacollection.get_valid_users(twitter_api, 10)
 	datacollection.save_users(users)
 	
 	print("Saved the following users:")
