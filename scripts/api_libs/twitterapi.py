@@ -1,6 +1,7 @@
 import twitter
 import json
 import sys
+import os
 import pprint
 
 try:
@@ -15,6 +16,7 @@ except FileNotFoundError:
 					   	"access_token_key":"",
 					   	"access_token_secret":""
 				  		}
+	os.mkdir("api_keys")
 	with open("api_keys/twitter_api_keys.secret", "w") as f:
 		f.write(json.dumps(empty_tw_api_keys, indent=4))
 finally:
